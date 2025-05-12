@@ -29,7 +29,6 @@ const useTranslateX = () => {
             return () => window.removeEventListener('scroll', scrollTracking);
         }, []);
     
-        console.log(scrollPosition);
     
         const handletranslateX = () => {
             if (scrollDirection === 'down' && scrollPosition >= 1500) {
