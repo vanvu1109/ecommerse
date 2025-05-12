@@ -1,17 +1,13 @@
-import CoundownBanner from "../CountdownBanner/CuontdownBanner";
 import MainLayout from "../Layout/Layout";
-import ProductItem from "../ProductItem/ProductItem";
-import styles from "./styles.module.scss"
+import styles from './styles.module.scss'
+import ProductItem from "@components/ProductItem/ProductItem"
 
-function HeadingListProduct({ data }) {
-    const { container, containerItem } = styles;
-
-
+function PopularProduct({ data }) {
+    const { container } = styles;
     return (
-        <MainLayout>
-            <div className={container}>
-                <CoundownBanner />
-                <div className={containerItem}>
+        <>
+            <MainLayout>
+                <div className={container}>
                     {
                         data.map((item) => {
                             return <ProductItem key={item.id}
@@ -23,9 +19,9 @@ function HeadingListProduct({ data }) {
                         })
                     }
                 </div>
-            </div>
-        </MainLayout>
+            </MainLayout>
+        </>
     );
 }
 
-export default HeadingListProduct;
+export default PopularProduct;

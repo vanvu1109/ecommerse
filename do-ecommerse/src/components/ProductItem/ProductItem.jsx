@@ -9,10 +9,10 @@ function ProductItem({ src, privewSrc, name, priceClass }) {
         <div>
             <div className={boxImg}>
                 <img
-                    src="https://xstore.b-cdn.net/elementor2/marseille04/wp-content/uploads/sites/2/2022/12/Image-1.1-min-285x340.jpg"
+                    src={src}
                     alt="image" />
                 <img
-                    src="https://xstore.b-cdn.net/elementor2/marseille04/wp-content/uploads/sites/2/2022/12/Image-1.2-min.jpg"
+                    src={privewSrc}
                     alt="image" className={showImgWhenHowver} />
                 <div className={showFnWhenHover}>
                     <div className={boxIcon}>
@@ -30,8 +30,8 @@ function ProductItem({ src, privewSrc, name, priceClass }) {
 
                 </div>
             </div>
-            <div className={title}>10K Yellow Gold</div>
-            <div className={price}>$99.99</div>
+            <div className={title}>{name}</div>
+            <div className={price}>{priceClass}</div>
         </div>
 
     );
